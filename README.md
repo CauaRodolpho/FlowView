@@ -218,7 +218,7 @@ O FlowView foi pensado para funcionar em computador, tablet e celular.
 
 ## Testes e qualidade
 
-O projeto possui **23 testes automatizados**, cobrindo principalmente as regras que não podem gerar resultados incorretos:
+O projeto possui **25 testes automatizados**, cobrindo principalmente as regras que não podem gerar resultados incorretos:
 
 - resumo financeiro e agrupamento de despesas;
 - receita líquida e resumo de vendas;
@@ -238,27 +238,17 @@ pnpm test
 pnpm build
 ```
 
-## Principais desafios
+## Processo de desenvolvimento
 
-### Transformar dados em informações úteis
+Comecei definindo o FlowView como um hub de dashboards para um projeto de portfólio. A partir disso, organizei a aplicação por domínio, mantendo Finanças, Vendas e Marketing com dados, cálculos e visualizações próprios.
 
-No início, alguns dashboards apresentavam números sem uma relação clara entre eles. Para resolver isso, defini dados específicos para cada domínio e fiz com que todas as visualizações partissem dos mesmos registros.
+Durante a construção, fui validando os fluxos diretamente na interface: criação de dashboards, importação de CSV, edição dos registros, troca de tema, reorganização dos widgets e exportação. Essas validações orientaram os ajustes de responsividade, contraste e navegação.
 
-### Simplificar a criação
+Também separei as regras de cálculo dos componentes visuais. Assim, os indicadores apresentados nos cards, gráficos e tabelas usam a mesma fonte de dados e podem ser revisados de forma independente.
 
-O primeiro fluxo possuía muitas etapas e perguntas parecidas. Ele foi reduzido para deixar as decisões mais importantes durante a criação e permitir que detalhes avançados sejam editados depois.
+### Ferramentas de apoio
 
-### Manter o tema claro legível
-
-Alguns componentes foram criados inicialmente pensando no fundo escuro. A solução foi organizar as cores com tokens semânticos e revisar superfícies, textos, bordas, modais e estados selecionados no tema claro.
-
-### Trabalhar com gráficos responsivos
-
-Os gráficos precisavam funcionar dentro de diferentes widgets e tamanhos de tela. Foram definidos containers com dimensões mínimas, limites de altura e layouts adaptáveis para evitar cortes ou renderização incorreta.
-
-### Organizar o código
-
-O componente principal chegou a concentrar muitas responsabilidades. A estrutura foi reorganizada, separando o shell da aplicação, os diálogos, a experiência AnaCraft, os cálculos e as funções compartilhadas de exportação e formatação.
+Usei o ChatGPT e o Codex como ferramentas de apoio ao longo do desenvolvimento, principalmente para discutir soluções, investigar problemas e revisar código e interface. A ideia do FlowView, o escopo, as funcionalidades e as decisões de experiência foram definidos por mim, e cada sugestão foi testada e adaptada ao resultado que eu queria alcançar.
 
 ## O que aprendi
 
