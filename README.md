@@ -10,7 +10,7 @@ O projeto possui dashboards especializados para **Finanças**, **Vendas** e **Ma
 
 ## Demonstração
 
-- **Projeto publicado:** [Acessar o FlowView](https://dashhub-caua.rodolfinhom5.chatgpt.site)
+- **Projeto publicado:** [Acessar o FlowView](https://flowview-two.vercel.app/)
 - **GitHub:** [CauaRodolpho](https://github.com/CauaRodolpho)
 - **LinkedIn:** [Cauã Rodolpho](https://www.linkedin.com/in/cauã-rodolpho/)
 - **Portfólio:** [Cauã Rodolpho — Front-End](https://portifolio-caua-rodolpho-hazel.vercel.app/)
