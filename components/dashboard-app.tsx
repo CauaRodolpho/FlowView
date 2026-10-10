@@ -21,11 +21,23 @@ function DashboardLoading() {
   return <div className="min-h-[60vh] bg-background p-5 sm:p-8"><div className="mx-auto max-w-[1440px] animate-pulse"><div className="mb-8 h-10 w-64 rounded-xl bg-muted" /><div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">{Array.from({ length: 4 }, (_, index) => <div key={index} className="h-32 rounded-[22px] border border-border bg-card" />)}</div><div className="mt-4 grid gap-4 lg:grid-cols-3"><div className="h-80 rounded-[22px] border border-border bg-card lg:col-span-2" /><div className="h-80 rounded-[22px] border border-border bg-card" /></div></div></div>;
 }
 
-const dynamicOptions = { ssr: false, loading: DashboardLoading } as const;
-const DashboardStudio = dynamic(() => import("@/components/dashboard-studio").then((module) => module.DashboardStudio), dynamicOptions);
-const FinanceDashboard = dynamic(() => import("@/components/finance-dashboard").then((module) => module.FinanceDashboard), dynamicOptions);
-const SalesDashboard = dynamic(() => import("@/components/sales-dashboard").then((module) => module.SalesDashboard), dynamicOptions);
-const MarketingDashboard = dynamic(() => import("@/components/marketing-dashboard").then((module) => module.MarketingDashboard), dynamicOptions);
+const DashboardStudio = dynamic(
+  () => import("@/components/dashboard-studio").then((module) => module.DashboardStudio),
+  { ssr: false, loading: DashboardLoading },
+);
+const FinanceDashboard = dynamic(
+  () => import("@/components/finance-dashboard").then((module) => module.FinanceDashboard),
+  { ssr: false, loading: DashboardLoading },
+);
+const SalesDashboard = dynamic(
+  () => import("@/components/sales-dashboard").then((module) => module.SalesDashboard),
+  { ssr: false, loading: DashboardLoading },
+);
+const MarketingDashboard = dynamic(
+  () =>
+    import("@/components/marketing-dashboard").then((module) => module.MarketingDashboard),
+  { ssr: false, loading: DashboardLoading },
+);
 
 
 function TemplateGallery({ use, chooseModel, theme }: { use: (kind: DashboardKind, name: string, model: DashboardModel) => void; chooseModel: (model: DashboardModel) => void; theme: "light" | "dark" }) {
