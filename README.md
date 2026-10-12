@@ -6,7 +6,7 @@ O **FlowView** é uma aplicação Front-End para criação e personalização de
 
 O projeto possui dashboards especializados para **Finanças**, **Vendas** e **Marketing**, além de uma demonstração completa da **AnaCraft Ateliê**. Também é possível criar um painel personalizado, escolher o estilo visual, alterar cores, organizar widgets e exportar os resultados.
 
-> Este projeto foi desenvolvido para o meu portfólio, com foco em React, TypeScript, arquitetura de componentes, responsividade e experiência do usuário.
+> Projeto idealizado e desenvolvido por **Cauã Rodolpho**, com foco em React, TypeScript, arquitetura de componentes, responsividade e experiência do usuário.
 
 ## Demonstração
 
@@ -175,7 +175,7 @@ FlowView/
 
 O componente central controla a navegação e decide qual experiência deve ser exibida. Os painéis especializados são carregados sob demanda e cada domínio possui suas próprias regras de cálculo.
 
-## Decisões técnicas
+## Decisões técnicas e soluções
 
 ### Por que o projeto não possui backend?
 
@@ -246,9 +246,9 @@ Durante a construção, fui validando os fluxos diretamente na interface: criaç
 
 Também separei as regras de cálculo dos componentes visuais. Assim, os indicadores apresentados nos cards, gráficos e tabelas usam a mesma fonte de dados e podem ser revisados de forma independente.
 
-### Ferramentas de apoio
+### Inteligência artificial como ferramenta de apoio
 
-Usei o ChatGPT e o Codex como ferramentas de apoio ao longo do desenvolvimento, principalmente para discutir soluções, investigar problemas e revisar código e interface. A ideia do FlowView, o escopo, as funcionalidades e as decisões de experiência foram definidos por mim, e cada sugestão foi testada e adaptada ao resultado que eu queria alcançar.
+Utilizei ferramentas de inteligência artificial de forma complementar durante pesquisas, análise de alternativas, revisão de código e investigação de problemas. A concepção do produto, a definição do escopo, as decisões de arquitetura e experiência, a implementação e a validação das funcionalidades foram conduzidas por mim. Cada sugestão recebida foi analisada, testada e adaptada antes de fazer parte do projeto.
 
 ## O que aprendi
 
@@ -283,15 +283,11 @@ pnpm dev
 
 Depois, abra o endereço informado no terminal.
 
-## Limitações atuais
+## Escopo atual
 
-- Os dados ficam disponíveis somente no navegador utilizado.
-- Não existe sincronização entre dispositivos.
-- Limpar os dados do navegador também remove os dashboards locais.
-- O projeto não possui autenticação ou banco de dados.
-- A importação CSV depende de cabeçalhos que possam ser identificados.
-- O backup JSON ainda não possui um fluxo de restauração pela interface.
-- O FlowView é uma demonstração de Front-End e não deve ser tratado como sistema financeiro real.
+O FlowView foi construído como uma aplicação Front-End de portfólio. Por isso, os dados são mantidos localmente no navegador e o projeto não inclui autenticação, banco de dados ou sincronização entre dispositivos. A proposta é demonstrar construção de interfaces, modelagem de dados, cálculos, persistência local e experiência do usuário — não substituir um sistema financeiro de produção.
+
+A importação CSV reconhece cabeçalhos compatíveis com os modelos disponíveis, enquanto o backup JSON funciona atualmente como uma forma de exportação dos dados do workspace.
 
 ## Possíveis melhorias futuras
 
